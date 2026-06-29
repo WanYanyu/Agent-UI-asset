@@ -2,6 +2,8 @@
 
 Coding Coach pet mascot assets and local preview tools.
 
+中文说明见 [README.zh-CN.md](README.zh-CN.md).
+
 ## Contents
 
 - `outputs/bluebot-sequence-v6-full-frame-acting-v6-1/`: full Bluebot package.

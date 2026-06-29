@@ -1,0 +1,332 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codex.local/schemas/pet-sequence-manifest.v1.json",
+  "title": "Coding Coach Pet Sequence Manifest",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "skin",
+    "displayName",
+    "assetVersion",
+    "packageType",
+    "format",
+    "size",
+    "states",
+    "exports",
+    "pathTemplate"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "pet-sequence-manifest/v1"
+    },
+    "skin": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "assetVersion": {
+      "type": "string"
+    },
+    "packageType": {
+      "enum": [
+        "source+runtime",
+        "runtime"
+      ]
+    },
+    "format": {
+      "enum": [
+        "webp"
+      ]
+    },
+    "size": {
+      "type": "integer",
+      "enum": [
+        64,
+        96,
+        128,
+        256,
+        512
+      ]
+    },
+    "sourceSize": {
+      "type": "integer"
+    },
+    "designSize": {
+      "type": "integer"
+    },
+    "stateOrder": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "idle",
+          "reading",
+          "running",
+          "judging",
+          "success",
+          "needs-fix"
+        ]
+      },
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "transitionOrder": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "reading_to_running",
+          "running_to_judging",
+          "judging_to_success",
+          "judging_to_needs-fix"
+        ]
+      }
+    },
+    "states": {
+      "type": "object",
+      "required": [
+        "idle",
+        "reading",
+        "running",
+        "judging",
+        "success",
+        "needs-fix"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "idle": {
+          "type": "object",
+          "required": [
+            "frames",
+            "fps",
+            "loop"
+          ],
+          "properties": {
+            "frames": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "fps": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "loop": {
+              "type": "boolean"
+            },
+            "next": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        },
+        "reading": {
+          "type": "object",
+          "required": [
+            "frames",
+            "fps",
+            "loop"
+          ],
+          "properties": {
+            "frames": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "fps": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "loop": {
+              "type": "boolean"
+            },
+            "next": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        },
+        "running": {
+          "type": "object",
+          "required": [
+            "frames",
+            "fps",
+            "loop"
+          ],
+          "properties": {
+            "frames": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "fps": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "loop": {
+              "type": "boolean"
+            },
+            "next": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        },
+        "judging": {
+          "type": "object",
+          "required": [
+            "frames",
+            "fps",
+            "loop"
+          ],
+          "properties": {
+            "frames": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "fps": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "loop": {
+              "type": "boolean"
+            },
+            "next": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        },
+        "success": {
+          "type": "object",
+          "required": [
+            "frames",
+            "fps",
+            "loop"
+          ],
+          "properties": {
+            "frames": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "fps": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "loop": {
+              "type": "boolean"
+            },
+            "next": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        },
+        "needs-fix": {
+          "type": "object",
+          "required": [
+            "frames",
+            "fps",
+            "loop"
+          ],
+          "properties": {
+            "frames": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "fps": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "loop": {
+              "type": "boolean"
+            },
+            "next": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "transitions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "frames",
+          "fps",
+          "from",
+          "to",
+          "loop"
+        ],
+        "properties": {
+          "frames": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "fps": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "from": {
+            "enum": [
+              "idle",
+              "reading",
+              "running",
+              "judging",
+              "success",
+              "needs-fix"
+            ]
+          },
+          "to": {
+            "enum": [
+              "idle",
+              "reading",
+              "running",
+              "judging",
+              "success",
+              "needs-fix"
+            ]
+          },
+          "loop": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "required": [
+        "defaultSize",
+        "runtimeSizes",
+        "preload",
+        "lazyLoad"
+      ],
+      "additionalProperties": true
+    },
+    "playback": {
+      "type": "object",
+      "required": [
+        "syncTransitions"
+      ],
+      "additionalProperties": true
+    },
+    "exports": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "format",
+          "alpha"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "pathTemplate": {
+      "type": "string"
+    },
+    "transitionPathTemplate": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,192 @@
+{
+  "skin": "bytecat",
+  "displayName": "Bytecat v6.1 Full Frame Acting",
+  "variant": "original-identity-full-frame-acting-v6-1",
+  "format": "webp",
+  "size": 128,
+  "sourceSize": 512,
+  "designSize": 256,
+  "runtimeComposition": "flattened-frame-sequence",
+  "pathTemplate": "{size}/{state}/pet_bytecat_{state}_{frame}.webp",
+  "sourcePathTemplate": "512/{state}/pet_bytecat_{state}_{frame}.png",
+  "transitionPathTemplate": "{size}/transitions/{transition}/pet_bytecat_{transition}_{frame}.webp",
+  "transitionSourcePathTemplate": "512/transitions/{transition}/pet_bytecat_{transition}_{frame}.png",
+  "states": {
+    "idle": {
+      "frames": 24,
+      "fps": 12,
+      "loop": true
+    },
+    "reading": {
+      "frames": 24,
+      "fps": 12,
+      "loop": true
+    },
+    "running": {
+      "frames": 24,
+      "fps": 16,
+      "loop": true
+    },
+    "judging": {
+      "frames": 24,
+      "fps": 12,
+      "loop": true
+    },
+    "success": {
+      "frames": 20,
+      "fps": 16,
+      "loop": false,
+      "next": "idle"
+    },
+    "needs-fix": {
+      "frames": 20,
+      "fps": 12,
+      "loop": false,
+      "next": "idle"
+    }
+  },
+  "transitions": {
+    "reading_to_running": {
+      "frames": 10,
+      "fps": 16,
+      "from": "reading",
+      "to": "running",
+      "loop": false
+    },
+    "running_to_judging": {
+      "frames": 10,
+      "fps": 16,
+      "from": "running",
+      "to": "judging",
+      "loop": false
+    },
+    "judging_to_success": {
+      "frames": 10,
+      "fps": 16,
+      "from": "judging",
+      "to": "success",
+      "loop": false
+    },
+    "judging_to_needs-fix": {
+      "frames": 10,
+      "fps": 16,
+      "from": "judging",
+      "to": "needs-fix",
+      "loop": false
+    }
+  },
+  "exports": {
+    "512": {
+      "format": "png",
+      "alpha": true
+    },
+    "256": {
+      "format": "webp",
+      "alpha": true,
+      "lossless": true
+    },
+    "128": {
+      "format": "webp",
+      "alpha": true,
+      "lossless": true
+    },
+    "96": {
+      "format": "webp",
+      "alpha": true,
+      "lossless": true
+    },
+    "64": {
+      "format": "webp",
+      "alpha": true,
+      "lossless": true
+    }
+  },
+  "notes": [
+    "All runtime assets are complete flattened transparent frames.",
+    "No hand, body, keyboard, or prop layer is moved independently at runtime.",
+    "Frames are generated from the approved original bytecat keyframes to preserve identity.",
+    "This package is intended for direct Agent consumption from asset folders plus manifest.json.",
+    "The Python generator is a production tool only and is not required by the frontend or Agent runtime.",
+    "Each state uses 20-24 complete frames built from explicit key poses and in-betweens.",
+    "Acting personality: agile-cat.",
+    "v6.1 adds manifest schema metadata and runtime packaging guidance."
+  ],
+  "$schema": "../pet-sequence-manifest.schema.json",
+  "schemaVersion": "pet-sequence-manifest/v1",
+  "assetVersion": "6.1.0",
+  "packageType": "source+runtime",
+  "stateOrder": [
+    "idle",
+    "reading",
+    "running",
+    "judging",
+    "success",
+    "needs-fix"
+  ],
+  "transitionOrder": [
+    "reading_to_running",
+    "running_to_judging",
+    "judging_to_success",
+    "judging_to_needs-fix"
+  ],
+  "runtime": {
+    "defaultSize": 128,
+    "runtimeSizes": [
+      128,
+      96,
+      64
+    ],
+    "sourceSizes": [
+      512,
+      256
+    ],
+    "runtimePackageName": "bytecat-sequence-v6-1-runtime",
+    "preload": {
+      "states": [
+        "idle"
+      ],
+      "transitions": []
+    },
+    "lazyLoad": {
+      "states": true,
+      "transitions": true
+    },
+    "excludedFromRuntime": [
+      "512",
+      "256",
+      "previews"
+    ],
+    "packageBytes": 5935939
+  },
+  "playback": {
+    "defaultTransitionPolicy": "play-transition-when-available",
+    "loopingStateSwitchPolicy": {
+      "mode": "wait-for-sync-frame",
+      "fallback": "cut-at-loop-boundary"
+    },
+    "syncTransitions": {
+      "running_to_judging": {
+        "fromState": "running",
+        "toState": "judging",
+        "preferredEntryFrame": 0,
+        "compatibleEntryFrames": [
+          0,
+          6,
+          12,
+          18
+        ],
+        "transitionStartFrame": 0,
+        "maxWaitMs": 1500,
+        "reason": "The transition starts from the running loop's keyed entry pose; waiting avoids a visible jump from late running frames."
+      }
+    }
+  },
+  "qa": {
+    "safePaddingTarget": "important pixels inside the central 80% of the 512 canvas",
+    "v61Changes": [
+      "Added schema, playback, and runtime packaging metadata.",
+      "Shifted the highest success-hop frames down slightly to keep small exports off the top edge."
+    ]
+  },
+  "packageBytes": 49222931
+}

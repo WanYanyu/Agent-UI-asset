@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pet Sequence Viewer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="titleBlock">
+          <h1>Pet Sequence Viewer</h1>
+          <div id="activePath" class="pathLine"></div>
+        </div>
+        <div class="controlRow">
+          <div class="controlGroup">
+            <span class="controlLabel">Skin</span>
+            <div id="skinTabs" class="segmented"></div>
+          </div>
+          <div class="controlGroup">
+            <span class="controlLabel">Package</span>
+            <div id="packageTabs" class="segmented"></div>
+          </div>
+          <div class="controlGroup">
+            <span class="controlLabel">Size</span>
+            <div id="sizeTabs" class="segmented"></div>
+          </div>
+          <div class="controlGroup">
+            <span class="controlLabel">Background</span>
+            <div id="backgroundTabs" class="segmented"></div>
+          </div>
+          <div class="controlGroup speedGroup">
+            <span class="controlLabel">Speed</span>
+            <input id="speedInput" type="range" min="0.25" max="2" step="0.25" value="1" />
+            <output id="speedOutput">1x</output>
+          </div>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="stagePanel">
+          <div class="stageHead">
+            <div>
+              <h2 id="sequenceTitle">Idle</h2>
+              <div id="sequenceMeta" class="muted"></div>
+            </div>
+            <div class="stageActions">
+              <button id="playToggle" class="iconButton" type="button" title="Play or pause">Pause</button>
+              <label class="checkControl">
+                <input id="safeZoneInput" type="checkbox" checked />
+                <span>Safe zone</span>
+              </label>
+            </div>
+          </div>
+          <div id="stageFrame" class="frameBox checker safe">
+            <img id="stageImage" alt="" />
+          </div>
+          <div id="timeline" class="timeline"></div>
+        </section>
+
+        <aside class="infoPanel">
+          <div class="infoBlock">
+            <h3>Manifest</h3>
+            <dl id="manifestFacts"></dl>
+          </div>
+          <div class="infoBlock">
+            <h3>Running → Judging</h3>
+            <dl id="syncFacts"></dl>
+          </div>
+        </aside>
+
+        <section id="sequenceGrid" class="sequenceGrid"></section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

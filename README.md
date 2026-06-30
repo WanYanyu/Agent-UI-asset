@@ -6,13 +6,15 @@ Coding Coach pet mascot assets and local preview tools.
 
 ## Contents
 
-- `outputs/bluebot-sequence-v6-full-frame-acting-v6-1/`: full Bluebot package.
-- `outputs/bytecat-sequence-v6-full-frame-acting-v6-1/`: full Bytecat package.
-- `outputs/nono-sequence-v6-full-frame-acting-v6-1/`: full Nono package.
-- `outputs/*-sequence-v6-1-runtime/`: slim runtime packages with `128`, `96`, and `64` WebP frames.
+- `outputs/bluebot-sequence-v7-acting/`: full Bluebot v7 package.
+- `outputs/bytecat-sequence-v7-acting/`: full Bytecat v7 package.
+- `outputs/nono-sequence-v7-acting/`: full Nono v7 package.
+- `outputs/*-sequence-v7-runtime/`: slim v7 runtime packages with `128`, `96`, and `64` WebP frames.
+- `outputs/*-sequence-v6-1-*`: v6.1 historical packages kept for comparison and rollback.
 - `outputs/coding-coach-pet-v7-acting-spec.md`: v7 acting-system design.
 - `outputs/coding-coach-pet-v7-acting-profiles.json`: machine-readable v7 acting profiles.
 - `outputs/pet-sequence-manifest.schema.json`: manifest schema.
+- `outputs/pet-v7-qa-report.json`: v7 structure, dimensions, safe-zone, and transition-sync QA report.
 - `viewer/`: local browser viewer for sequence playback and v7 acting-profile review.
 
 ## Local Preview
@@ -30,4 +32,4 @@ Open:
 
 ## Notes
 
-Bluebot is the default pet. Bytecat and Nono are intended to become distinct pets with their own acting systems, not alternate skins on the same animation skeleton.
+Bluebot is the default pet. Bytecat and Nono are v7 pets with their own acting systems, not alternate skins on the same animation skeleton.

@@ -1,21 +1,23 @@
 # Agent UI Asset
 
-Coding Coach / Agent UI 宠物素材仓库，包含三套宠物序列帧、运行时资源包、manifest schema，以及本地可视化预览工具。
+Coding Coach / Agent UI 宠物素材仓库，包含三套 v7 独立表演体系宠物序列帧、运行时资源包、manifest schema、QA 报告，以及本地可视化预览工具。
 
 ## 仓库内容
 
-- `outputs/bluebot-sequence-v6-full-frame-acting-v6-1/`：Bluebot 完整素材包。
-- `outputs/bytecat-sequence-v6-full-frame-acting-v6-1/`：Bytecat 完整素材包。
-- `outputs/nono-sequence-v6-full-frame-acting-v6-1/`：Nono 完整素材包。
-- `outputs/*-sequence-v6-1-runtime/`：前端运行时轻量包，只包含 `128`、`96`、`64` 三种 WebP 尺寸。
+- `outputs/bluebot-sequence-v7-acting/`：Bluebot v7 完整素材包。
+- `outputs/bytecat-sequence-v7-acting/`：Bytecat v7 完整素材包。
+- `outputs/nono-sequence-v7-acting/`：Nono v7 完整素材包。
+- `outputs/*-sequence-v7-runtime/`：v7 前端运行时轻量包，只包含 `128`、`96`、`64` 三种 WebP 尺寸。
+- `outputs/*-sequence-v6-1-*`：v6.1 历史素材包，保留用于对比和回退。
 - `outputs/pet-sequence-manifest.schema.json`：宠物序列 manifest schema。
+- `outputs/pet-v7-qa-report.json`：v7 生成后的结构、尺寸、安全区和同步检查报告。
 - `outputs/coding-coach-pet-v7-acting-spec.md`：v7 表演体系设计文档。
 - `outputs/coding-coach-pet-v7-acting-profiles.json`：v7 表演体系的机器可读配置。
 - `viewer/`：本地预览器，用于查看序列帧播放和 v7 表演体系对比。
 
 ## 宠物定位
 
-当前三只宠物不是简单换皮关系：
+v7 三只宠物不是简单换皮关系：
 
 - **Bluebot**：默认宠物，稳定、工程感、低打扰，适合作为 Agent 默认状态入口。
 - **Bytecat**：新的个性宠物，动作由耳朵、尾巴、爪子和身体重心驱动，更像敏捷的学习伙伴。
@@ -71,7 +73,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 ## v7 方向
 
-v7 的重点是让三只宠物拥有不同表演体系：
+v7 已生成实际序列帧和运行时包，重点是让三只宠物拥有不同表演体系：
 
 - Bluebot 保持默认基准，动作克制、清晰、稳定。
 - Bytecat 用耳朵、尾巴和爪子建立独立动作语言。
@@ -81,6 +83,7 @@ v7 的重点是让三只宠物拥有不同表演体系：
 
 - [v7 Acting Spec](outputs/coding-coach-pet-v7-acting-spec.md)
 - [v7 Acting Profiles JSON](outputs/coding-coach-pet-v7-acting-profiles.json)
+- [v7 QA Report](outputs/pet-v7-qa-report.json)
 
 ## GitHub Pages
 

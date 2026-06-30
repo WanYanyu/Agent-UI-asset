@@ -2,20 +2,20 @@ const SKINS = [
   {
     id: "bluebot",
     label: "Bluebot",
-    full: "../outputs/bluebot-sequence-v6-full-frame-acting-v6-1",
-    runtime: "../outputs/bluebot-sequence-v6-1-runtime",
+    full: "../outputs/bluebot-sequence-v7-acting",
+    runtime: "../outputs/bluebot-sequence-v7-runtime",
   },
   {
     id: "bytecat",
     label: "Bytecat",
-    full: "../outputs/bytecat-sequence-v6-full-frame-acting-v6-1",
-    runtime: "../outputs/bytecat-sequence-v6-1-runtime",
+    full: "../outputs/bytecat-sequence-v7-acting",
+    runtime: "../outputs/bytecat-sequence-v7-runtime",
   },
   {
     id: "nono",
     label: "Nono",
-    full: "../outputs/nono-sequence-v6-full-frame-acting-v6-1",
-    runtime: "../outputs/nono-sequence-v6-1-runtime",
+    full: "../outputs/nono-sequence-v7-acting",
+    runtime: "../outputs/nono-sequence-v7-runtime",
   },
 ];
 

@@ -23,6 +23,10 @@
       "type": "string",
       "pattern": "^[a-z0-9-]+$"
     },
+    "petId": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
     "displayName": {
       "type": "string"
     },
@@ -292,6 +296,17 @@
         },
         "additionalProperties": true
       }
+    },
+    "actingProfile": {
+      "type": "object",
+      "required": [
+        "id",
+        "summary",
+        "motionLanguage",
+        "signatureParts",
+        "stateGestures"
+      ],
+      "additionalProperties": true
     },
     "runtime": {
       "type": "object",

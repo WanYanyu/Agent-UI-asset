@@ -1,0 +1,206 @@
+{
+  "source_dir": "/Users/yanyu/Documents/Codex/2026-07-02/status/outputs/pets/wizard/previews/reading-keyframes-v1-locked-clean/fitted",
+  "output": "/Users/yanyu/Documents/Codex/2026-07-02/status/outputs/pets/wizard/previews/reading-keyframes-v3-action-group",
+  "action_zone": [
+    132,
+    208,
+    334,
+    336
+  ],
+  "frames": [
+    {
+      "name": "pet_wizard_reading_keyframe_v3_action-000-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "bbox": [
+        148,
+        50,
+        364,
+        460
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "keygreen": 0,
+      "magenta": 0,
+      "changed_in_action_mask": 0,
+      "changed_outside_action_mask": 0,
+      "pass": true
+    },
+    {
+      "name": "pet_wizard_reading_keyframe_v3_action-001-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "bbox": [
+        148,
+        50,
+        364,
+        460
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "keygreen": 0,
+      "magenta": 0,
+      "changed_in_action_mask": 11765,
+      "changed_outside_action_mask": 0,
+      "pass": true
+    },
+    {
+      "name": "pet_wizard_reading_keyframe_v3_action-002-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "bbox": [
+        148,
+        50,
+        364,
+        460
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "keygreen": 0,
+      "magenta": 0,
+      "changed_in_action_mask": 10394,
+      "changed_outside_action_mask": 0,
+      "pass": true
+    },
+    {
+      "name": "pet_wizard_reading_keyframe_v3_action-003-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "bbox": [
+        148,
+        50,
+        364,
+        460
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "keygreen": 0,
+      "magenta": 0,
+      "changed_in_action_mask": 10873,
+      "changed_outside_action_mask": 0,
+      "pass": true
+    },
+    {
+      "name": "pet_wizard_reading_keyframe_v3_action-004-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "bbox": [
+        148,
+        50,
+        364,
+        460
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "keygreen": 0,
+      "magenta": 0,
+      "changed_in_action_mask": 11037,
+      "changed_outside_action_mask": 0,
+      "pass": true
+    },
+    {
+      "name": "pet_wizard_reading_keyframe_v3_action-005-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "bbox": [
+        148,
+        50,
+        364,
+        460
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "keygreen": 0,
+      "magenta": 0,
+      "changed_in_action_mask": 11261,
+      "changed_outside_action_mask": 0,
+      "pass": true
+    },
+    {
+      "name": "pet_wizard_reading_keyframe_v3_action-006-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "bbox": [
+        148,
+        50,
+        364,
+        460
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "keygreen": 0,
+      "magenta": 0,
+      "changed_in_action_mask": 11332,
+      "changed_outside_action_mask": 0,
+      "pass": true
+    },
+    {
+      "name": "pet_wizard_reading_keyframe_v3_action-007-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "bbox": [
+        148,
+        50,
+        364,
+        460
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "keygreen": 0,
+      "magenta": 0,
+      "changed_in_action_mask": 11653,
+      "changed_outside_action_mask": 0,
+      "pass": true
+    }
+  ],
+  "gif_frames": 8,
+  "pass": true
+}

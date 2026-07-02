@@ -1,0 +1,154 @@
+[
+  {
+    "frame": 0,
+    "raw_bbox": [
+      9,
+      45,
+      419,
+      348
+    ],
+    "canvas_bbox": [
+      53,
+      96,
+      458,
+      395
+    ],
+    "scale": 0.9879518072289156,
+    "green_removed_final": 450,
+    "magenta_removed_final": 2,
+    "white_removed_final": 3
+  },
+  {
+    "frame": 1,
+    "raw_bbox": [
+      2,
+      46,
+      417,
+      348
+    ],
+    "canvas_bbox": [
+      51,
+      97,
+      461,
+      395
+    ],
+    "scale": 0.9879518072289156,
+    "green_removed_final": 471,
+    "magenta_removed_final": 0,
+    "white_removed_final": 3
+  },
+  {
+    "frame": 2,
+    "raw_bbox": [
+      7,
+      48,
+      419,
+      350
+    ],
+    "canvas_bbox": [
+      52,
+      97,
+      459,
+      395
+    ],
+    "scale": 0.9879518072289156,
+    "green_removed_final": 431,
+    "magenta_removed_final": 2,
+    "white_removed_final": 2
+  },
+  {
+    "frame": 3,
+    "raw_bbox": [
+      4,
+      48,
+      416,
+      351
+    ],
+    "canvas_bbox": [
+      52,
+      96,
+      459,
+      395
+    ],
+    "scale": 0.9879518072289156,
+    "green_removed_final": 452,
+    "magenta_removed_final": 0,
+    "white_removed_final": 2
+  },
+  {
+    "frame": 4,
+    "raw_bbox": [
+      7,
+      37,
+      419,
+      339
+    ],
+    "canvas_bbox": [
+      52,
+      97,
+      459,
+      395
+    ],
+    "scale": 0.9879518072289156,
+    "green_removed_final": 473,
+    "magenta_removed_final": 1,
+    "white_removed_final": 2
+  },
+  {
+    "frame": 5,
+    "raw_bbox": [
+      2,
+      38,
+      417,
+      339
+    ],
+    "canvas_bbox": [
+      51,
+      98,
+      461,
+      395
+    ],
+    "scale": 0.9879518072289156,
+    "green_removed_final": 463,
+    "magenta_removed_final": 0,
+    "white_removed_final": 1
+  },
+  {
+    "frame": 6,
+    "raw_bbox": [
+      7,
+      36,
+      419,
+      339
+    ],
+    "canvas_bbox": [
+      52,
+      96,
+      459,
+      395
+    ],
+    "scale": 0.9879518072289156,
+    "green_removed_final": 461,
+    "magenta_removed_final": 2,
+    "white_removed_final": 0
+  },
+  {
+    "frame": 7,
+    "raw_bbox": [
+      4,
+      35,
+      418,
+      339
+    ],
+    "canvas_bbox": [
+      51,
+      95,
+      460,
+      395
+    ],
+    "scale": 0.9879518072289156,
+    "green_removed_final": 481,
+    "magenta_removed_final": 2,
+    "white_removed_final": 3
+  }
+]

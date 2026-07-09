@@ -9,6 +9,7 @@ Coding Coach pet mascot assets and local preview tools.
 - `outputs/bluebot-sequence-v7-acting/`: full Bluebot v7 package.
 - `outputs/bytecat-sequence-v7-acting/`: full Bytecat v7 package.
 - `outputs/nono-sequence-v7-acting/`: full Nono v7 package.
+- `outputs/wizard-sequence-v6-full-frame-acting-v6-1/`: partial Xiao Locke Wizard package (`idle`, `reading`, `judging`, `success`; `running` and `needs-fix` are not exported yet).
 - `outputs/*-sequence-v7-runtime/`: slim v7 runtime packages with `128`, `96`, and `64` WebP frames.
 - `outputs/*-sequence-v6-1-*`: v6.1 historical packages kept for comparison and rollback.
 - `outputs/coding-coach-pet-v7-acting-spec.md`: v7 acting-system design.
@@ -32,4 +33,4 @@ Open:
 
 ## Notes
 
-Bluebot is the default pet. Bytecat and Nono are v7 pets with their own acting systems, not alternate skins on the same animation skeleton.
+Bluebot is the default pet. Bytecat and Nono are v7 pets with their own acting systems, not alternate skins on the same animation skeleton. Wizard is a partial Xiao Locke package and should not be treated as complete until `running` and `needs-fix` are approved and exported.

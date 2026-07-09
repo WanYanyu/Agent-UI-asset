@@ -17,6 +17,12 @@ const SKINS = [
     full: "../outputs/nono-sequence-v7-acting",
     runtime: "../outputs/nono-sequence-v7-runtime",
   },
+  {
+    id: "wizard",
+    label: "Wizard",
+    full: "../outputs/wizard-sequence-v6-full-frame-acting-v6-1",
+    runtime: "../outputs/wizard-sequence-v6-1-runtime",
+  },
 ];
 
 const PACKAGE_OPTIONS = [
@@ -94,7 +100,13 @@ function sequenceDef(name) {
 }
 
 function sequenceNames() {
-  return [...app.manifest.stateOrder, ...app.manifest.transitionOrder];
+  const stateNames = app.manifest.stateOrder.filter(
+    (name) => app.manifest.states[name]?.available !== false,
+  );
+  const transitionNames = app.manifest.transitionOrder.filter(
+    (name) => app.manifest.transitions[name]?.available !== false,
+  );
+  return [...stateNames, ...transitionNames];
 }
 
 function frameUrl(name, frame, size = app.size) {
@@ -264,8 +276,8 @@ function renderInfo() {
     ["Display", manifest.displayName],
     ["Version", manifest.assetVersion],
     ["Package", manifest.packageType],
-    ["States", manifest.stateOrder.length],
-    ["Transitions", manifest.transitionOrder.length],
+    ["States", sequenceNames().filter((name) => manifest.states[name]).length],
+    ["Transitions", sequenceNames().filter((name) => manifest.transitions[name]).length],
   ]);
   renderFacts(els.syncFacts, [
     ["Policy", manifest.playback?.loopingStateSwitchPolicy?.mode || "none"],

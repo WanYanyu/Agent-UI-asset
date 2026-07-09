@@ -1,0 +1,143 @@
+{
+  "$schema": "../pet-sequence-manifest.schema.json",
+  "schemaVersion": "pet-sequence-manifest/v1",
+  "skin": "wizard",
+  "displayName": "Xiao Locke Wizard v6.1 Partial",
+  "variant": "xiao-locke-wizard-partial-v6-1",
+  "assetVersion": "6.1.0-xiao-locke-partial.1",
+  "packageType": "runtime",
+  "format": "webp",
+  "size": 128,
+  "designSize": 128,
+  "runtimeComposition": "flattened-frame-sequence",
+  "pathTemplate": "{size}/{state}/pet_wizard_{state}_{frame}.webp",
+  "states": {
+    "idle": {
+      "frames": 12,
+      "fps": 8,
+      "loop": true,
+      "available": true
+    },
+    "reading": {
+      "frames": 8,
+      "fps": 8,
+      "loop": true,
+      "available": true
+    },
+    "running": {
+      "frames": 1,
+      "fps": 8,
+      "loop": true,
+      "available": false,
+      "missingReason": "Not exported in this partial Xiao Locke package."
+    },
+    "judging": {
+      "frames": 8,
+      "fps": 6,
+      "loop": true,
+      "frameDurationMs": 160,
+      "available": true
+    },
+    "success": {
+      "frames": 16,
+      "fps": 8,
+      "loop": false,
+      "next": "idle",
+      "frameDurationMs": 120,
+      "available": true
+    },
+    "needs-fix": {
+      "frames": 1,
+      "fps": 8,
+      "loop": false,
+      "available": false,
+      "missingReason": "Not exported in this partial Xiao Locke package.",
+      "next": "idle"
+    }
+  },
+  "missingStates": [
+    "running",
+    "needs-fix"
+  ],
+  "transitions": {},
+  "exports": {
+    "128": {
+      "format": "webp",
+      "alpha": true,
+      "lossless": true
+    },
+    "96": {
+      "format": "webp",
+      "alpha": true,
+      "lossless": true
+    },
+    "64": {
+      "format": "webp",
+      "alpha": true,
+      "lossless": true
+    }
+  },
+  "notes": [
+    "Partial Xiao Locke wizard package: running is intentionally excluded because the current run cycle is not approved.",
+    "needs-fix has not been generated yet and is marked unavailable.",
+    "Available states are complete flattened transparent frames.",
+    "No text, logos, code screenshots, UI screenshots, or hidden-case cues are included."
+  ],
+  "stateOrder": [
+    "idle",
+    "reading",
+    "running",
+    "judging",
+    "success",
+    "needs-fix"
+  ],
+  "transitionOrder": [],
+  "runtime": {
+    "defaultSize": 128,
+    "runtimeSizes": [
+      128,
+      96,
+      64
+    ],
+    "sourceSizes": [],
+    "runtimePackageName": "wizard-sequence-v6-1-runtime",
+    "preload": {
+      "states": [
+        "idle"
+      ],
+      "transitions": []
+    },
+    "lazyLoad": {
+      "states": true,
+      "transitions": false
+    },
+    "excludedFromRuntime": [
+      "512",
+      "256",
+      "previews"
+    ],
+    "packageBytes": 1144732
+  },
+  "playback": {
+    "defaultTransitionPolicy": "cut-when-transition-unavailable",
+    "loopingStateSwitchPolicy": {
+      "mode": "cut-at-loop-boundary",
+      "fallback": "cut-at-loop-boundary"
+    },
+    "syncTransitions": {}
+  },
+  "qa": {
+    "safePaddingTarget": "important pixels inside the central 80% of the 512 canvas",
+    "uploadedStates": [
+      "idle",
+      "reading",
+      "judging",
+      "success"
+    ],
+    "omittedStates": [
+      "running",
+      "needs-fix"
+    ]
+  },
+  "packageBytes": 1144732
+}

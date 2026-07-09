@@ -1,15 +1,15 @@
 {
   "skin": "nono",
   "displayName": "Nono v6.1 Full Frame Acting",
-  "variant": "original-identity-full-frame-acting-v6-1",
-  "format": "webp",
-  "size": 128,
+  "variant": "source-png",
+  "format": "png",
+  "size": 512,
   "sourceSize": 512,
   "designSize": 256,
   "runtimeComposition": "flattened-frame-sequence",
-  "pathTemplate": "{size}/{state}/pet_nono_{state}_{frame}.webp",
+  "pathTemplate": "512/{state}/pet_nono_{state}_{frame}.png",
   "sourcePathTemplate": "512/{state}/pet_nono_{state}_{frame}.png",
-  "transitionPathTemplate": "{size}/transitions/{transition}/pet_nono_{transition}_{frame}.webp",
+  "transitionPathTemplate": "512/transitions/{transition}/pet_nono_{transition}_{frame}.png",
   "transitionSourcePathTemplate": "512/transitions/{transition}/pet_nono_{transition}_{frame}.png",
   "states": {
     "idle": {
@@ -78,27 +78,8 @@
   "exports": {
     "512": {
       "format": "png",
-      "alpha": true
-    },
-    "256": {
-      "format": "webp",
       "alpha": true,
-      "lossless": true
-    },
-    "128": {
-      "format": "webp",
-      "alpha": true,
-      "lossless": true
-    },
-    "96": {
-      "format": "webp",
-      "alpha": true,
-      "lossless": true
-    },
-    "64": {
-      "format": "webp",
-      "alpha": true,
-      "lossless": true
+      "role": "source"
     }
   },
   "notes": [
@@ -110,12 +91,13 @@
     "Each state uses 20-24 complete frames built from explicit key poses and in-betweens.",
     "Acting personality: steady-orbital.",
     "v6.1 adds manifest schema metadata and runtime packaging guidance.",
-    "v6.1 scales Nono source frames to restore transparent safe padding."
+    "v6.1 scales Nono source frames to restore transparent safe padding.",
+    "Source-only package: keeps manifest plus 512 PNG source frames; runtime WebP frames live in the matching runtime package."
   ],
   "$schema": "../pet-sequence-manifest.schema.json",
   "schemaVersion": "pet-sequence-manifest/v1",
   "assetVersion": "6.1.0",
-  "packageType": "source+runtime",
+  "packageType": "source",
   "stateOrder": [
     "idle",
     "reading",
@@ -187,6 +169,5 @@
     "v61Changes": [
       "Scaled source frames to 78% around canvas center to restore safe padding at 128/96/64."
     ]
-  },
-  "packageBytes": 31941410
+  }
 }

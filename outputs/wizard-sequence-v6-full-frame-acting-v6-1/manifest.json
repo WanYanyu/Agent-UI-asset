@@ -3,15 +3,15 @@
   "schemaVersion": "pet-sequence-manifest/v1",
   "skin": "wizard",
   "displayName": "Xiao Locke Wizard v6.1 Partial",
-  "variant": "xiao-locke-wizard-partial-v6-1",
+  "variant": "source-png",
   "assetVersion": "6.1.0-xiao-locke-partial.1",
-  "packageType": "source+runtime",
-  "format": "webp",
-  "size": 128,
+  "packageType": "source",
+  "format": "png",
+  "size": 512,
   "sourceSize": 512,
   "designSize": 256,
   "runtimeComposition": "flattened-frame-sequence",
-  "pathTemplate": "{size}/{state}/pet_wizard_{state}_{frame}.webp",
+  "pathTemplate": "512/{state}/pet_wizard_{state}_{frame}.png",
   "sourcePathTemplate": "512/{state}/pet_wizard_{state}_{frame}.png",
   "states": {
     "idle": {
@@ -65,34 +65,16 @@
   "exports": {
     "512": {
       "format": "png",
-      "alpha": true
-    },
-    "256": {
-      "format": "webp",
       "alpha": true,
-      "lossless": true
-    },
-    "128": {
-      "format": "webp",
-      "alpha": true,
-      "lossless": true
-    },
-    "96": {
-      "format": "webp",
-      "alpha": true,
-      "lossless": true
-    },
-    "64": {
-      "format": "webp",
-      "alpha": true,
-      "lossless": true
+      "role": "source"
     }
   },
   "notes": [
     "Partial Xiao Locke wizard package: running is intentionally excluded because the current run cycle is not approved.",
     "needs-fix has not been generated yet and is marked unavailable.",
     "Available states are complete flattened transparent frames.",
-    "No text, logos, code screenshots, UI screenshots, or hidden-case cues are included."
+    "No text, logos, code screenshots, UI screenshots, or hidden-case cues are included.",
+    "Source-only package: keeps manifest plus 512 PNG source frames; runtime WebP frames live in the matching runtime package."
   ],
   "stateOrder": [
     "idle",
@@ -152,6 +134,5 @@
       "running",
       "needs-fix"
     ]
-  },
-  "packageBytes": 13474594
+  }
 }

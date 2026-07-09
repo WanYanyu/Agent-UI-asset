@@ -2,20 +2,20 @@ const SKINS = [
   {
     id: "bluebot",
     label: "Bluebot",
-    full: "../outputs/bluebot-sequence-v7-acting",
-    runtime: "../outputs/bluebot-sequence-v7-runtime",
+    full: "../outputs/bluebot-sequence-v6-full-frame-acting-v6-1",
+    runtime: "../outputs/bluebot-sequence-v6-1-runtime",
   },
   {
     id: "bytecat",
     label: "Bytecat",
-    full: "../outputs/bytecat-sequence-v7-acting",
-    runtime: "../outputs/bytecat-sequence-v7-runtime",
+    full: "../outputs/bytecat-sequence-v6-full-frame-acting-v6-1",
+    runtime: "../outputs/bytecat-sequence-v6-1-runtime",
   },
   {
     id: "nono",
     label: "Nono",
-    full: "../outputs/nono-sequence-v7-acting",
-    runtime: "../outputs/nono-sequence-v7-runtime",
+    full: "../outputs/nono-sequence-v6-full-frame-acting-v6-1",
+    runtime: "../outputs/nono-sequence-v6-1-runtime",
   },
   {
     id: "wizard",
@@ -27,7 +27,7 @@ const SKINS = [
 
 const PACKAGE_OPTIONS = [
   { id: "runtime", label: "Runtime" },
-  { id: "full", label: "Full" },
+  { id: "full", label: "Source PNG" },
 ];
 
 const BACKGROUNDS = [
@@ -155,6 +155,11 @@ function availableSizes() {
   return Object.keys(app.manifest.exports)
     .map(Number)
     .sort((a, b) => a - b);
+}
+
+function previewSize() {
+  const sizes = availableSizes();
+  return sizes.includes(128) ? 128 : sizes[0];
 }
 
 function ensureSize() {
@@ -308,7 +313,7 @@ function renderGrid() {
     const img = document.createElement("img");
     img.alt = "";
     img.dataset.sequenceImage = name;
-    img.src = frameUrl(name, 0, Math.min(app.size, 128));
+    img.src = frameUrl(name, 0, previewSize());
     mini.append(img);
 
     const body = document.createElement("span");
@@ -369,7 +374,7 @@ function advanceCards(now) {
     const name = img.dataset.sequenceImage;
     const def = sequenceDef(name);
     const frame = Math.floor((now / 1000) * def.fps * app.speed) % def.frames;
-    img.src = frameUrl(name, frame, Math.min(app.size, 128));
+    img.src = frameUrl(name, frame, previewSize());
   }
 }
 

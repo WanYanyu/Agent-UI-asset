@@ -36,12 +36,14 @@
     "packageType": {
       "enum": [
         "source+runtime",
+        "source",
         "runtime"
       ]
     },
     "format": {
       "enum": [
-        "webp"
+        "webp",
+        "png"
       ]
     },
     "size": {
